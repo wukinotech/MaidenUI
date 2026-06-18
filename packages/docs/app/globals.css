@@ -177,6 +177,23 @@
     text-rendering: optimizeLegibility;
   }
 
+  html.lenis {
+    scroll-behavior: auto;
+  }
+
+  html.lenis body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
   body {
     background-color: var(--maiden-bg);
     color: var(--maiden-fg);

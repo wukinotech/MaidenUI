@@ -10,6 +10,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@maidenui/tokens": "workspace:*",
+    "framer-motion": "^12.10.0",
+    "lenis": "^1.2.0",
     "react": "^19.0.0"
   },
   "devDependencies": {
