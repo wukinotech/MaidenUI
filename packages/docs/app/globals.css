@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.maiden-dark, .maiden-dark *));
+
+@theme {
+  /* Font families */
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-heading: "Instrument Serif", "Georgia", serif;
+  --font-body: "Inter", "SF Pro", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.25rem;
+  --text-6xl: 4rem;
+  --text-7xl: 5rem;
+  --text-8xl: 6.5rem;
+  --text-9xl: 8rem;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.06em;
+  --tracking-widest: 0.12em;
+
+  /* Spacing */
+  --spacing-px: 1px;
+  --spacing-0: 0rem;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3-5: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+  --spacing-36: 9rem;
+  --spacing-40: 10rem;
+  --spacing-44: 11rem;
+  --spacing-48: 12rem;
+  --spacing-52: 13rem;
+  --spacing-56: 14rem;
+  --spacing-60: 15rem;
+  --spacing-64: 16rem;
+  --spacing-72: 18rem;
+  --spacing-80: 20rem;
+  --spacing-96: 24rem;
+
+  /* Border radius */
+  --radius-none: 0rem;
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Border widths */
+  --border-none: 0px;
+  --border-thin: 0.5px;
+  --border-base: 1px;
+  --border-medium: 1.5px;
+  --border-thick: 2px;
+
+  /* Z-index */
+  --z-base: 0;
+  --z-above: 10;
+  --z-elevated: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+  --z-tooltip: 60;
+  --z-max: 999;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-deep: 0 8px 32px rgba(0, 0, 0, 0.10);
+  --shadow-overlay: 0 16px 48px rgba(0, 0, 0, 0.14);
+  --shadow-glow: 0 0 60px rgba(255, 255, 255, 0.04);
+
+  /* Blur */
+  --blur-none: 0px;
+  --blur-sm: 4px;
+  --blur-base: 8px;
+  --blur-md: 12px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+  --blur-2xl: 40px;
+  --blur-3xl: 64px;
+
+  /* Durations */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  --duration-slowest: 1200ms;
+  --duration-reveal: 2000ms;
+
+  /* Easing */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-elegant: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0.2, 1.2);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Colors */
+  --color-maiden-bg: var(--maiden-bg);
+  --color-maiden-bg-elevated: var(--maiden-bg-elevated);
+  --color-maiden-bg-surface: var(--maiden-bg-surface);
+  --color-maiden-fg: var(--maiden-fg);
+  --color-maiden-fg-muted: var(--maiden-fg-muted);
+  --color-maiden-fg-subtle: var(--maiden-fg-subtle);
+  --color-maiden-border: var(--maiden-border);
+  --color-maiden-border-subtle: var(--maiden-border-subtle);
+  --color-maiden-accent: var(--maiden-accent);
+  --color-maiden-accent-muted: var(--maiden-accent-muted);
+  --color-maiden-overlay: var(--maiden-overlay);
+  --color-maiden-glow: var(--maiden-glow);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--maiden-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--maiden-bg);
+    color: var(--maiden-fg);
+    font-family: var(--font-body);
+    transition: background-color 500ms ease, color 500ms ease;
+  }
+
+  ::selection {
+    background-color: var(--maiden-fg);
+    color: var(--maiden-bg);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--maiden-fg-muted);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .maiden-light {
+    --maiden-bg: #fcf9f5;
+    --maiden-bg-elevated: #f8f6f2;
+    --maiden-bg-surface: #f2efe9;
+    --maiden-fg: #12110f;
+    --maiden-fg-muted: #4a4742;
+    --maiden-fg-subtle: #a39e94;
+    --maiden-border: #d6d1c8;
+    --maiden-border-subtle: #f2efe9;
+    --maiden-accent: #12110f;
+    --maiden-accent-muted: #b3b0a9;
+    --maiden-overlay: rgba(0, 0, 0, 0.2);
+    --maiden-glow: rgba(0, 0, 0, 0.02);
+  }
+
+  .maiden-dark {
+    --maiden-bg: #12110f;
+    --maiden-bg-elevated: #2d2b27;
+    --maiden-bg-surface: #1a1814;
+    --maiden-fg: #f5f5f4;
+    --maiden-fg-muted: #b3b0a9;
+    --maiden-fg-subtle: #7a7569;
+    --maiden-border: #37352f;
+    --maiden-border-subtle: #26241f;
+    --maiden-accent: #f5e3bc;
+    --maiden-accent-muted: #4b4840;
+    --maiden-overlay: rgba(0, 0, 0, 0.6);
+    --maiden-glow: rgba(255, 255, 255, 0.03);
+  }
+}

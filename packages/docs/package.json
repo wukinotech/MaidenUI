@@ -1,0 +1,31 @@
+{
+  "name": "docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next"
+  },
+  "dependencies": {
+    "@maidenui/tokens": "workspace:*",
+    "@maidenui/theme": "workspace:*",
+    "@maidenui/ui": "workspace:*",
+    "@maidenui/typography": "workspace:*",
+    "@maidenui/motion": "workspace:*",
+    "@maidenui/atmosphere": "workspace:*",
+    "next": "^15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

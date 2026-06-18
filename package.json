@@ -1,0 +1,23 @@
+{
+  "name": "maidenui",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "dev:docs": "turbo dev --filter=docs",
+    "build:tokens": "turbo build --filter=tokens",
+    "build:theme": "turbo build --filter=theme",
+    "build:ui": "turbo build --filter=ui",
+    "build:docs": "turbo build --filter=docs"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
